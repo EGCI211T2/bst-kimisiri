@@ -115,15 +115,13 @@ void postOrder(TreeNode* treePtr) {
 
 void kill(TreeNode* treePtr) {
   if (treePtr == NULL) {return;}
-  postOrder(treePtr->move_left());
-  postOrder(treePtr->move_right());
   delete treePtr;
 } // end function
 
 void preOrder(TreeNode* treePtr) {
   if (treePtr == NULL) {return;}
   cout << setw(3) << treePtr->get_value(); 
-  postOrder(treePtr->move_left());
-  postOrder(treePtr->move_right());
+  preOrder(treePtr->move_left());
+  preOrder(treePtr->move_right());
 } // end function
 
