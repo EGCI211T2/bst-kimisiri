@@ -85,7 +85,7 @@ BST::BST() {
 
 BST::~BST() { 
   cout << "Kill BST" << endl; 
-    
+  delete rootPtr;
 }
 
 void inOrder(TreeNode* treePtr) {

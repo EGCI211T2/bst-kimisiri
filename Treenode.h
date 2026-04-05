@@ -11,6 +11,9 @@ class TreeNode {
       cout << data << "inserted" << endl;
     }
     ~TreeNode() {
+      if (leftPtr != NULL) {delete leftPtr;}
+      if (rightPtr != NULL) {delete rightPtr;}
+      
       cout<<"Deleting "<< data<<endl;
     }
     void set_left(TreeNode* t){leftPtr=t;}
