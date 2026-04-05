@@ -1,0 +1,14 @@
+#include <iostream>
+#include <iomanip>
+using namespace std;
+#include "BST.h"
+
+int main(int argc, char **argv) {
+  unsigned int i;
+  BST b;
+  for (i = 1; i < argc; ++i) {
+    b.insert_node(atoi(argv[i]));
+  }
+  b.print(3);
+  return 0;
+}
